@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html class="w3-center"lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Assignment</title>
+	<link rel="stylesheet" href="main.css" />
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+		<script src="finalAssignment.js"></script>
+		<!-- This is the api key which allows me to place my latitude and longitude on a map -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJw0QfJXXleECtFD5031OMG75lZMiC6dY&callback=initMap&libraries=&v=weekly"defer></script>
+		
+</head>
+<!-- This is the script that allows me to bring charts into the page -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.1.4/Chart.min.js"></script>
+
+<body class="w3-center"> 
+<div class="background">
+	<!-- Asks the user for an input and provides them with 4 radio buttons ( 2 sets of 2) one set to chose measurment, the other to chose frequency of the weather data -->
+	<h1 class="dailyOutput">Please choose which measurement and frequency you want</h1>
+
+	<!-- Creates 2 radio buttons with the same name so only one of them can be clicked at a time, they both refresh the weather data on click so it is more accurate, hence "onclick=printWeather();" -->
+	<input type="radio" id="celcius" name="temp" value="celcius" checked="true" >Celcius
+	<input type="radio" name="temp" value="fahrenheit" >Fahrenheit<br>
+
+	<!-- Creates 2 radio buttons with the same name so only one of them can be clicked at a time, they both refresh the weather data on click so it is more accurate, hence "onclick=printWeather();" -->
+	<input type="radio" id="daily" name="frequency" value="Daily" checked="true" >Daily
+	<input type="radio" id="weekly" name="frequency" value="Weekly">Weekly<br>
+
+
+	<!-- //My search box, It's default value is Athlone -->
+	<p>Search: <input id="Search" type="text" value="Athlone"></p>
+		<!-- The button which, when it is clicked, runs the function printWeather -->
+		<input type="button" id="Button1" value="GO">
+		<input type="button" id="geoButton" value="Geolocation">
+	<p id="outputday1"></p>
+
+		<p id="testy"></p>
+	<div class="data" id="data">
+		</div>
+		
+		<!-- 
+			These are the containers which hold my graphs, they both have ID's so they can be reffered to induvidually -->
+		<div class="w3-row" id="container">
+			<div  class="w3-half" id="chartContainer1">
+				<canvas id="Chart1"></canvas>
+			</div>
+			<div class="w3-half" id="chartContainer2">
+				<canvas id="Chart2"></canvas>
+			</div>
+		</div>
+</div>
+<div>
+<h2  class="mapbackground"> Here is your current Geolocation on a map</h2>
+</div>
+		<div id="map"></div>
+	
+
+</body>
+
+</html>

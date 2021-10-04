@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin: 0 auto;
+  
+}
+
+img{
+    
+    width: 100%;
+}
+
+.daily{
+    height: 30%;
+    width:20%;
+  
+}
+
+.dailyOutput{
+    align-items: center;
+    text-align: center;
+    color: black;
+}
+
+.headingone{
+    color: black;
+}
+h1{
+    color: black;
+}
+
+h2 {
+    border-bottom: 2px solid black;
+}
+
+.tagDate{
+    text-align: center;
+    color: gray;
+    font-size: .75rem;
+}
+#map {
+    height: 400px;
+    width: 100%;
+  }
+  
+.background{
+    background-image: url(images/Background4.jpg);
+    background-size: 100% 100%;
+    background-size:cover;
+    
+}
+
+.mapbackground{
+    background-color: darkcyan;
+}
